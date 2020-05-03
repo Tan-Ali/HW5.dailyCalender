@@ -23,3 +23,14 @@ THEN the saved events persist
 
 I was able to accomplish all the above acceptable criteria.  Below is an exemple of the application and how certain parts work:
 
+EXAMPLE OF CHANGE IN COLOR
+![color change](assets/exampleColorChange.png)
+
+EXAMPLE OF LOCAL STORAGE
+![local storage](assets/localStorage.png)
+
+EXAMPLE OF LOCAL STORAGE GIF
+![local storage gif](assets/exampleOfLocalStorage.gif)
+
+EXAMPLE OF TIME CHANGE GIF
+![time change gif](assets/exampleOfTimeChange.gif)
