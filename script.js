@@ -7,11 +7,11 @@ $(document).ready(function() {
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-
+// save items to local storage
         localStorage.setItem(time, text);
     })
-
-    
+// load data from local storage?
+$("#hour9 .description").val(localStorage.getItem("hour9"));
 
 })
 
@@ -20,8 +20,8 @@ $(document).ready(function() {
 
 
 
-// save items to local storage
 
-// load data from local storage?
+
+
 
 // check over time blocks
