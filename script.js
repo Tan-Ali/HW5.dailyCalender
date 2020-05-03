@@ -20,7 +20,7 @@ $("#hour14 .description").val(localStorage.getItem("hour14"));
 $("#hour15 .description").val(localStorage.getItem("hour15"));
 $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
-$("#hour19 .description").val(localStorage.getItem("hour19"));
+
 
 
 // track hour/know what time it is
