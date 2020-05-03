@@ -1,6 +1,6 @@
 // load document
 $(document).ready(function() {
-    event.preventDefault();
+    
     // display current time and date from moments
     $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     // save user input for certain time
@@ -21,11 +21,37 @@ $("#hour3 .description").val(localStorage.getItem("hour3"));
 $("#hour4 .description").val(localStorage.getItem("hour4"));
 $("#hour5 .description").val(localStorage.getItem("hour5"));
 
+
 // track hour/know what time it is
 
 function trackHour () {
-    
+    var currentHour = moment().hour();
+// loop through time blocks using each function
+    $(".time-block").each(function() {
+        var hourBlock = parseInt($(this).attr("id").split("hour")[1]);
+
+        console.log(hourBlock, currentHour)
+
+        // check over time blocks
+    if (hourBlock < currentHour) {
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+    }
+    else if (hourBlock === currentHour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+        }
+    else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+        }
+    })
+
 }
+trackHour();
 })
 
 
@@ -36,5 +62,3 @@ function trackHour () {
 
 
 
-
-// check over time blocks
